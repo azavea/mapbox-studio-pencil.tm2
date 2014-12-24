@@ -5,7 +5,7 @@
 <Parameters>
   <Parameter name="attribution"><![CDATA[<a href='http://mapbox.com/about/maps' target='_blank'>Terms & Feedback</a>]]></Parameter>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
-  <Parameter name="center">12.503868341445923,41.88701328987302,18</Parameter>
+  <Parameter name="center">12.5039,41.887,18</Parameter>
   <Parameter name="description"><![CDATA[A painstakingly hand-drawn representation of the entire world. 2B graphite on acid-free paper.]]></Parameter>
   <Parameter name="format">png8:m=h</Parameter>
   <Parameter name="maxzoom">21</Parameter>
@@ -80,25 +80,6 @@
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'park')</Filter>
-    <PolygonPatternSymbolizer opacity="0.5" file="img/shade_medium.png" />
-    <LineSymbolizer stroke-width="2" stroke-opacity="0.4" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'park')</Filter>
-    <PolygonPatternSymbolizer opacity="0.5" file="img/shade_medium.png" />
-    <LinePatternSymbolizer file="img/line_shade_22.png" />
-  </Rule>
-  <Rule>
-    <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'park')</Filter>
-    <PolygonPatternSymbolizer opacity="0.5" file="img/shade_medium.png" />
-    <LineSymbolizer stroke-opacity="0.4" stroke-width="1.2" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([class] = 'cemetery')</Filter>
     <PolygonPatternSymbolizer opacity="0.5" file="img/shade_medium.png" />
     <LineSymbolizer stroke-width="2" stroke-opacity="0.4" />
@@ -114,6 +95,10 @@
     <Filter>([class] = 'cemetery')</Filter>
     <PolygonPatternSymbolizer opacity="0.5" file="img/shade_medium.png" />
     <LineSymbolizer stroke-opacity="0.4" stroke-width="1.2" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'park')</Filter>
+    <PolygonSymbolizer fill="#8fb98f" />
   </Rule>
 </Style>
 <Layer name="landuse"
@@ -133,36 +118,36 @@
   <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
-    <PolygonSymbolizer fill="#ffffff" gamma="0.5" />
+    <PolygonSymbolizer fill="#dee3fd" gamma="0.5" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
-    <PolygonSymbolizer fill="#ffffff" gamma="0.5" />
+    <PolygonSymbolizer fill="#dee3fd" gamma="0.5" />
   </Rule>
 </Style>
 <Style name="water-light16" filter-mode="first" image-filters="agg-stack-blur(32,32)" image-filters-inflate="true">
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <MinScaleDenominator>5000</MinScaleDenominator>
-    <PolygonSymbolizer fill="#ffffff" gamma="0.5" />
+    <PolygonSymbolizer fill="#dee3fd" gamma="0.5" />
   </Rule>
 </Style>
 <Style name="water-light15" filter-mode="first" image-filters="agg-stack-blur(16,16)" image-filters-inflate="true">
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <PolygonSymbolizer fill="#ffffff" gamma="0.5" />
+    <PolygonSymbolizer fill="#dee3fd" gamma="0.5" />
   </Rule>
 </Style>
 <Style name="water-light14" filter-mode="first" image-filters="agg-stack-blur(8,8)" image-filters-inflate="true">
   <Rule>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <PolygonSymbolizer fill="#ffffff" gamma="0.5" />
+    <PolygonSymbolizer fill="#dee3fd" gamma="0.5" />
   </Rule>
 </Style>
 <Style name="water-dark" filter-mode="first">
   <Rule>
-    <PolygonSymbolizer fill="#aaaaaa" />
+    <PolygonSymbolizer fill="#c6c6c6" />
   </Rule>
 </Style>
 <Layer name="water"
@@ -235,6 +220,7 @@
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <MinScaleDenominator>500</MinScaleDenominator>
     <PolygonPatternSymbolizer file="img/shade_light.png" alignment="global" />
+    <PolygonSymbolizer fill="#ffdb91" fill-opacity="0.2" />
     <LinePatternSymbolizer file="img/line_solid_6.png" />
   </Rule>
 </Style>
@@ -255,6 +241,7 @@
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
     <PolygonPatternSymbolizer file="img/shade_medium.png" />
+    <PolygonSymbolizer fill="#ffdb91" fill-opacity="0.2" />
     <LinePatternSymbolizer file="img/line_solid_6.png" />
   </Rule>
 </Style>
@@ -1437,9 +1424,15 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
       </Layer>
 
+<Style name="place_label" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <TextSymbolizer face-name="Quintessential Regular" size="20" halo-fill="rgba(255, 255, 255, 0.19999999999999996)" halo-radius="2" character-spacing="3" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+</Style>
 <Layer name="place_label"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-      </Layer>
+    <StyleName>place_label</StyleName>  </Layer>
 
 <Layer name="water_label"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
@@ -1449,17 +1442,36 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
       </Layer>
 
+<Style name="road_label" filter-mode="first">
+  <Rule>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([class] = 'main')</Filter>
+    <TextSymbolizer face-name="HolmenOT BoldItalic" placement="line" minimum-distance="100" halo-radius="0.5" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+</Style>
 <Layer name="road_label"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-      </Layer>
+    <StyleName>road_label</StyleName>  </Layer>
 
+<Style name="waterway_label" filter-mode="first">
+  <Rule>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <TextSymbolizer face-name="Mister K Onstage Pro Regular" size="20" placement="line" fill="#001326" halo-fill="rgba(255, 255, 255, 0.19999999999999996)" halo-radius="2" max-char-angle-delta="5" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+</Style>
 <Layer name="waterway_label"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-      </Layer>
+    <StyleName>waterway_label</StyleName>  </Layer>
 
+<Style name="housenum_label" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <TextSymbolizer face-name="Tartine Script Offc Pro Regular" ><![CDATA[[house_num]]]></TextSymbolizer>
+  </Rule>
+</Style>
 <Layer name="housenum_label"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-      </Layer>
+    <StyleName>housenum_label</StyleName>  </Layer>
 
 <Layer name="bathymetry"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">

@@ -11,12 +11,12 @@ Map {
 #water {
   // The ::dark and ::light attachments create a subtle inner-
   // shadow on water bodies for added contrast.
-  ::dark { polygon-fill: #aaa; }
+  ::dark { polygon-fill: #c6c6c6; }
   ::light14[zoom<=14],
   ::light15[zoom=15],
   ::light16[zoom=16],
   ::light17[zoom>=17] {
-    polygon-fill: #fff;
+    polygon-fill: #dee3fd;
     polygon-gamma: 0.5;
     image-filters: agg-stack-blur(8,8);
     image-filters-inflate: true;
@@ -32,10 +32,40 @@ Map {
   }
 }
 
+#waterway_label [zoom<=16] {
+  text-face-name: 'Mister K Onstage Pro Regular';
+  text-name: [name];
+  text-size: 20;
+  text-placement: line;
+  text-fill: #001326;
+  text-halo-fill: fadeout(#ffffff,80%);
+  text-halo-radius: 2;
+  text-max-char-angle-delta: 5;
+  }
+
+#place_label [zoom>=15]{
+  text-face-name: 'Quintessential Regular';
+  text-name: [name];
+  text-size: 20;
+  text-halo-fill: fadeout(#ffffff,80%);
+  text-halo-radius: 2;
+  text-character-spacing: 3;
+  }
+
+#road_label [zoom <=17] [class='main'] {
+  text-face-name: 'HolmenOT BoldItalic';
+  text-name: [name];
+  text-placement: line;
+  text-min-distance: 100;
+  text-halo-radius: 0.5;
+  }
+
 #landuse {
   opacity: 0.5;
   comp-op: multiply;
-  [class='park'],
+  [class='park'] {
+    polygon-fill: #8fb98f;
+    }
   [class='cemetery'] {
     polygon-pattern-opacity: 0.5;
     polygon-pattern-file:url(img/shade_medium.png);
@@ -67,6 +97,8 @@ Map {
 
 #building[zoom=15] {
   polygon-pattern-file:url(img/shade_medium.png);
+  polygon-fill: #ffdb91;
+  polygon-opacity: 0.2;
   line-pattern-file:url(img/line_solid_6.png);
 }
 #building[zoom>=16] {
@@ -82,10 +114,16 @@ Map {
   }
   ::fill[zoom>=15][zoom<=20] {
     polygon-pattern-file:url(img/shade_light.png);
+    polygon-fill: #ffdb91;
     polygon-pattern-alignment:global;
+    polygon-opacity: 0.2;
     line-pattern-file:url(img/line_solid_6.png);
   }
 }
+#housenum_label [zoom>18] {
+  text-name: [house_num];
+  text-face-name: 'Tartine Script Offc Pro Regular';
+  }
 
 #admin[admin_level=2] {
   ::glow[maritime=0] {
