@@ -3,6 +3,7 @@
 // to regular line strokes.
 
 #road['mapnik::geometry_type'=2]::line,
+
 #bridge['mapnik::geometry_type'=2]::line,
 #tunnel['mapnik::geometry_type'=2]::line {
   [class='motorway'] {
@@ -22,7 +23,7 @@
         b/line-width:1.2;
       }
       [zoom>=10] {
-        a/line-width:1.6;
+        a/line-width:1.5;
         b/line-width:2.0;
       }
     }

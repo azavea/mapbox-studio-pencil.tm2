@@ -5,11 +5,11 @@
 <Parameters>
   <Parameter name="attribution"><![CDATA[<a href='http://mapbox.com/about/maps' target='_blank'>Terms & Feedback</a>]]></Parameter>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
-  <Parameter name="center">12.5039,41.887,18</Parameter>
+  <Parameter name="center">-75.1865,39.9677,16</Parameter>
   <Parameter name="description"><![CDATA[A painstakingly hand-drawn representation of the entire world. 2B graphite on acid-free paper.]]></Parameter>
   <Parameter name="format">png8:m=h</Parameter>
   <Parameter name="maxzoom">21</Parameter>
-  <Parameter name="minzoom">0</Parameter>
+  <Parameter name="minzoom">12</Parameter>
   <Parameter name="name"><![CDATA[Pencil]]></Parameter>
   <Parameter name="source"><![CDATA[mapbox:///mapbox.mapbox-terrain-v1,mapbox.mapbox-streets-v5,mapbox.mapbox-bathymetry-v1]]></Parameter>
 </Parameters>
@@ -41,40 +41,9 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>hillshade</StyleName>  </Layer>
 
-<Style name="contour" filter-mode="first" opacity="0.5">
-  <Rule>
-    <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([index] = 10)</Filter>
-    <LinePatternSymbolizer file="img/line_solid_6.png" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <Filter>([index] = 10)</Filter>
-    <LinePatternSymbolizer file="img/line_solid_6.png" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <Filter>([index] = 5)</Filter>
-    <LinePatternSymbolizer file="img/line_solid_6.png" />
-  </Rule>
-  <Rule>
-    <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([index] = 2)</Filter>
-    <LinePatternSymbolizer file="img/line_dotted_4.png" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <Filter>([index] = 2)</Filter>
-    <LinePatternSymbolizer file="img/line_dotted_4.png" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <LinePatternSymbolizer file="img/line_dotted_4.png" />
-  </Rule>
-</Style>
 <Layer name="contour"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-    <StyleName>contour</StyleName>  </Layer>
+      </Layer>
 
 <Style name="landuse" filter-mode="first" comp-op="multiply" opacity="0.5">
   <Rule>
@@ -431,7 +400,7 @@
     <MaxScaleDenominator>750000</MaxScaleDenominator>
     <MinScaleDenominator>200000</MinScaleDenominator>
     <Filter>([mapnik::geometry_type] = 2) and ([class] = 'motorway')</Filter>
-    <LineSymbolizer stroke-width="1.6" stroke-opacity="0.1" stroke-dasharray="2, 1" />
+    <LineSymbolizer stroke-width="1.5" stroke-opacity="0.1" stroke-dasharray="2, 1" />
     <LineSymbolizer stroke-width="2" stroke-opacity="0.1" stroke-dasharray="12, 1" />
   </Rule>
   <Rule>
@@ -815,7 +784,7 @@
     <MaxScaleDenominator>750000</MaxScaleDenominator>
     <MinScaleDenominator>200000</MinScaleDenominator>
     <Filter>([mapnik::geometry_type] = 2) and ([class] = 'motorway')</Filter>
-    <LineSymbolizer stroke-width="1.6" stroke-opacity="0.1" stroke-dasharray="2, 1" />
+    <LineSymbolizer stroke-width="1.5" stroke-opacity="0.1" stroke-dasharray="2, 1" />
     <LineSymbolizer stroke-width="2" stroke-opacity="0.1" stroke-dasharray="12, 1" />
   </Rule>
   <Rule>
@@ -1182,7 +1151,7 @@
     <MaxScaleDenominator>750000</MaxScaleDenominator>
     <MinScaleDenominator>200000</MinScaleDenominator>
     <Filter>([mapnik::geometry_type] = 2) and ([class] = 'motorway')</Filter>
-    <LineSymbolizer stroke-width="1.6" stroke-opacity="0.1" stroke-dasharray="2, 1" />
+    <LineSymbolizer stroke-width="1.5" stroke-opacity="0.1" stroke-dasharray="2, 1" />
     <LineSymbolizer stroke-width="2" stroke-opacity="0.1" stroke-dasharray="12, 1" />
   </Rule>
   <Rule>
@@ -1446,7 +1415,16 @@
   <Rule>
     <MinScaleDenominator>2500</MinScaleDenominator>
     <Filter>([class] = 'main')</Filter>
-    <TextSymbolizer face-name="HolmenOT BoldItalic" placement="line" minimum-distance="100" halo-radius="0.5" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer face-name="HolmenOT BoldItalic" size="14" placement="line" minimum-distance="100" halo-radius="0.5" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([class] = 'main')</Filter>
+    <TextSymbolizer face-name="HolmenOT BoldItalic" size="12" placement="line" minimum-distance="100" halo-radius="0.5" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <TextSymbolizer face-name="HolmenOT BoldItalic" size="12" placement="line" minimum-distance="100" halo-radius="0.5" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
 </Style>
 <Layer name="road_label"
@@ -1455,7 +1433,7 @@
 
 <Style name="waterway_label" filter-mode="first">
   <Rule>
-    <MinScaleDenominator>5000</MinScaleDenominator>
+    <MinScaleDenominator>500</MinScaleDenominator>
     <TextSymbolizer face-name="Mister K Onstage Pro Regular" size="20" placement="line" fill="#001326" halo-fill="rgba(255, 255, 255, 0.19999999999999996)" halo-radius="2" max-char-angle-delta="5" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
 </Style>

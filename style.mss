@@ -32,7 +32,7 @@ Map {
   }
 }
 
-#waterway_label [zoom<=16] {
+#waterway_label [zoom<=20] {
   text-face-name: 'Mister K Onstage Pro Regular';
   text-name: [name];
   text-size: 20;
@@ -43,7 +43,7 @@ Map {
   text-max-char-angle-delta: 5;
   }
 
-#place_label [zoom>=15]{
+#place_label [zoom >=15]{
   text-face-name: 'Quintessential Regular';
   text-name: [name];
   text-size: 20;
@@ -54,6 +54,16 @@ Map {
 
 #road_label [zoom <=17] [class='main'] {
   text-face-name: 'HolmenOT BoldItalic';
+  text-name: [name];
+  text-size: 14;
+  text-placement: line;
+  text-min-distance: 100;
+  text-halo-radius: 0.5;
+  }
+
+#road_label [zoom >=18]  {
+  text-face-name: 'HolmenOT BoldItalic';
+  text-size: 12;
   text-name: [name];
   text-placement: line;
   text-min-distance: 100;

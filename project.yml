@@ -8,15 +8,15 @@ bounds:
   - 180
   - 85.0511
 center: 
-  - 12.5039
-  - 41.887
-  - 18
+  - -75.1865
+  - 39.9677
+  - 16
 description: A painstakingly hand-drawn representation of the entire world. 2B graphite on acid-free paper.
 format: "png8:m=h"
 interactivity_layer: ''
 layers: null
 maxzoom: 21
-minzoom: 0
+minzoom: 12
 name: Pencil
 source: "mapbox:///mapbox.mapbox-terrain-v1,mapbox.mapbox-streets-v5,mapbox.mapbox-bathymetry-v1"
 styles: 
