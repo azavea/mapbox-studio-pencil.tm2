@@ -43,13 +43,14 @@ Map {
   text-halo-radius: 2;
   text-max-char-angle-delta: 5;
   }
-  [zoom=16] {
+ #waterway_label [zoom=16] {
   text-face-name: 'Mister K Onstage Pro Regular';
   text-name: [name];
   text-size: 24;
   text-placement: line;
   text-fill: #001326;
   text-min-distance: 500;
+  text-avoid-edges: true;
   text-halo-fill: fadeout(#ffffff,70%);
   text-halo-radius: 2;
   text-max-char-angle-delta: 5;
@@ -67,7 +68,7 @@ Map {
   text-max-char-angle-delta:5;
 }
 
-#place_label [zoom=12]{
+#place_label [zoom=12][localrank=1]{
   text-face-name: 'Quintessential Regular';
   text-name: [name];
   text-size: 14;
@@ -76,7 +77,7 @@ Map {
   text-character-spacing: 3;
   
   }
-#place_label [zoom=13]{
+#place_label [zoom=13][localrank=1]{
   text-face-name: 'Quintessential Regular';
   text-name: [name];
   text-size: 16;
@@ -85,8 +86,9 @@ Map {
   text-character-spacing: 3;
   text-wrap-width: 100;
   text-wrap-before: true;
+  text-line-spacing: -7;
 }
-#place_label [zoom >=14]{
+#place_label [zoom=14][localrank=1]{
   text-face-name: 'Quintessential Regular';
   text-name: [name];
   text-size: 16;
@@ -95,24 +97,36 @@ Map {
   text-character-spacing: 3;
   text-wrap-width: 100;
   text-wrap-before: true;
+  text-line-spacing: -7;
+ }
+  #place_label [zoom>=15]{
+  text-face-name: 'Quintessential Regular';
+  text-name: [name];
+  text-size: 16;
+  text-halo-fill: fadeout(#ffffff,50%);
+  text-halo-radius: 4;
+  text-character-spacing: 3;
+  text-wrap-width: 100;
+  text-wrap-before: true;
+  text-line-spacing: -7;
   
   }
 
 #road_label [zoom=16][class='main']{
-  text-face-name: 'HolmenOT Bold';
+  text-face-name: 'HolmenHeadlineOT Regular';
   text-name: [name];
-  text-size: 12;
+  text-size: 14;
   text-placement: line;
-  text-min-distance: 200;
+  text-min-distance: 500;
   text-fill: #363636;
   text-halo-fill: fadeout(#ffffff,30%);
   text-halo-radius: 3;
   text-max-char-angle-delta:5;
   }
 #road_label [zoom=17]{
-  text-face-name: 'HolmenOT Bold';
+  text-face-name: 'HolmenHeadlineOT Regular';
   text-name: [name];
-  text-size: 14;
+  text-size: 16;
   text-placement: line;
   text-min-distance: 200;
   text-fill: #363636;
@@ -122,8 +136,8 @@ Map {
   }
 
 #road_label [zoom >=18]  {
-  text-face-name: 'HolmenOT Bold';
-  text-size: 16;
+  text-face-name: 'HolmenHeadlineOT Regular';
+  text-size: 18;
   text-name: [name];
   text-placement: line;
    text-min-distance: 200;

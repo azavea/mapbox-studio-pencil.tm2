@@ -15,10 +15,10 @@ description: 'Fairmount Waterworks basemap using 2B graphite on acid-free paper 
 format: "png8:m=h"
 interactivity_layer: ''
 layers: null
-maxzoom: 21
+maxzoom: 20
 minzoom: 12
 name: Fairmount Waterworks Basemap
-source: "mapbox:///mapbox.mapbox-terrain-v1,mapbox.mapbox-streets-v5,mapbox.mapbox-bathymetry-v1"
+source: "mapbox:///mapbox.mapbox-terrain-v1,mapbox.mapbox-streets-v5"
 styles: 
   - style.mss
   - road.mss
