@@ -53,7 +53,13 @@
       b/line-opacity:0.05;
       b/line-dasharray:12,1;
     }
-    [zoom=13] { line-pattern-file:url(img/line_solid_6.png); }
+    [zoom=13] {
+      a/line-width:1.5;
+      a/line-opacity:0.05;
+      a/line-dasharray:2,1;
+      b/line-width:1.2;
+      b/line-opacity:0.05;
+      b/line-dasharray:12,1; }
     [zoom=14] { line-pattern-file:url(img/line_solid_6.png); }
   }
   [class='service'] {

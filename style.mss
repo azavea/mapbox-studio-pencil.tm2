@@ -32,42 +32,105 @@ Map {
   }
 }
 
-#waterway_label [zoom<=20] {
+#waterway_label [zoom=15] {
   text-face-name: 'Mister K Onstage Pro Regular';
   text-name: [name];
-  text-size: 20;
+  text-size: 22;
   text-placement: line;
   text-fill: #001326;
-  text-halo-fill: fadeout(#ffffff,80%);
+  text-min-distance: 500;
+  text-halo-fill: fadeout(#ffffff,70%);
   text-halo-radius: 2;
   text-max-char-angle-delta: 5;
   }
+  [zoom=16] {
+  text-face-name: 'Mister K Onstage Pro Regular';
+  text-name: [name];
+  text-size: 24;
+  text-placement: line;
+  text-fill: #001326;
+  text-min-distance: 500;
+  text-halo-fill: fadeout(#ffffff,70%);
+  text-halo-radius: 2;
+  text-max-char-angle-delta: 5;
+  }
+#waterway_label [zoom >=17] {
+  text-face-name: 'Mister K Onstage Pro Regular';
+  text-name: [name];
+  text-size: 26;
+  text-placement: line;
+  text-avoid-edges: true;
+  text-min-distance: 1000;
+  text-fill: #001326;
+  text-halo-fill: fadeout(#ffffff,70%);
+  text-halo-radius: 4;
+  text-max-char-angle-delta:5;
+}
 
-#place_label [zoom >=15]{
+#place_label [zoom=12]{
   text-face-name: 'Quintessential Regular';
   text-name: [name];
-  text-size: 20;
-  text-halo-fill: fadeout(#ffffff,80%);
-  text-halo-radius: 2;
+  text-size: 14;
+  text-halo-fill: fadeout(#ffffff,40%);
+  text-halo-radius: 3;
   text-character-spacing: 3;
+  
+  }
+#place_label [zoom=13]{
+  text-face-name: 'Quintessential Regular';
+  text-name: [name];
+  text-size: 16;
+  text-halo-fill: fadeout(#ffffff,50%);
+  text-halo-radius: 4;
+  text-character-spacing: 3;
+  text-wrap-width: 100;
+  text-wrap-before: true;
+}
+#place_label [zoom >=14]{
+  text-face-name: 'Quintessential Regular';
+  text-name: [name];
+  text-size: 16;
+  text-halo-fill: fadeout(#ffffff,50%);
+  text-halo-radius: 4;
+  text-character-spacing: 3;
+  text-wrap-width: 100;
+  text-wrap-before: true;
+  
   }
 
-#road_label [zoom <=17] [class='main'] {
-  text-face-name: 'HolmenOT BoldItalic';
+#road_label [zoom=16][class='main']{
+  text-face-name: 'HolmenOT Bold';
+  text-name: [name];
+  text-size: 12;
+  text-placement: line;
+  text-min-distance: 200;
+  text-fill: #363636;
+  text-halo-fill: fadeout(#ffffff,30%);
+  text-halo-radius: 3;
+  text-max-char-angle-delta:5;
+  }
+#road_label [zoom=17]{
+  text-face-name: 'HolmenOT Bold';
   text-name: [name];
   text-size: 14;
   text-placement: line;
-  text-min-distance: 100;
-  text-halo-radius: 0.5;
+  text-min-distance: 200;
+  text-fill: #363636;
+  text-halo-fill: fadeout(#ffffff,30%);
+  text-halo-radius: 3;
+  text-max-char-angle-delta:5;
   }
 
 #road_label [zoom >=18]  {
-  text-face-name: 'HolmenOT BoldItalic';
-  text-size: 12;
+  text-face-name: 'HolmenOT Bold';
+  text-size: 16;
   text-name: [name];
   text-placement: line;
-  text-min-distance: 100;
-  text-halo-radius: 0.5;
+   text-min-distance: 200;
+  text-fill: #363636;
+  text-halo-fill: fadeout(#ffffff,30%);
+  text-halo-radius: 4;
+  text-max-char-angle-delta:5;
   }
 
 #landuse {

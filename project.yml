@@ -11,13 +11,13 @@ center:
   - -75.1865
   - 39.9677
   - 16
-description: A painstakingly hand-drawn representation of the entire world. 2B graphite on acid-free paper.
+description: 'Fairmount Waterworks basemap using 2B graphite on acid-free paper mapbox design. '
 format: "png8:m=h"
 interactivity_layer: ''
 layers: null
 maxzoom: 21
 minzoom: 12
-name: Pencil
+name: Fairmount Waterworks Basemap
 source: "mapbox:///mapbox.mapbox-terrain-v1,mapbox.mapbox-streets-v5,mapbox.mapbox-bathymetry-v1"
 styles: 
   - style.mss
