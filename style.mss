@@ -102,7 +102,7 @@ Map {
   #place_label [zoom>=15]{
   text-face-name: 'Quintessential Regular';
   text-name: [name];
-  text-size: 16;
+  text-size: 22;
   text-halo-fill: fadeout(#ffffff,50%);
   text-halo-radius: 4;
   text-character-spacing: 3;
@@ -115,7 +115,7 @@ Map {
 #road_label [zoom=16][class='main']{
   text-face-name: 'HolmenHeadlineOT Regular';
   text-name: [name];
-  text-size: 14;
+  text-size: 16;
   text-placement: line;
   text-min-distance: 500;
   text-fill: #363636;
@@ -126,7 +126,7 @@ Map {
 #road_label [zoom=17]{
   text-face-name: 'HolmenHeadlineOT Regular';
   text-name: [name];
-  text-size: 16;
+  text-size: 18;
   text-placement: line;
   text-min-distance: 200;
   text-fill: #363636;
@@ -140,7 +140,7 @@ Map {
   text-size: 18;
   text-name: [name];
   text-placement: line;
-   text-min-distance: 200;
+  text-min-distance: 200;
   text-fill: #363636;
   text-halo-fill: fadeout(#ffffff,30%);
   text-halo-radius: 4;
