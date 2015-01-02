@@ -3,6 +3,7 @@
 // to regular line strokes.
 
 #road['mapnik::geometry_type'=2]::line,
+
 #bridge['mapnik::geometry_type'=2]::line,
 #tunnel['mapnik::geometry_type'=2]::line {
   [class='motorway'] {
@@ -22,7 +23,7 @@
         b/line-width:1.2;
       }
       [zoom>=10] {
-        a/line-width:1.6;
+        a/line-width:1.5;
         b/line-width:2.0;
       }
     }
@@ -52,7 +53,13 @@
       b/line-opacity:0.05;
       b/line-dasharray:12,1;
     }
-    [zoom=13] { line-pattern-file:url(img/line_solid_6.png); }
+    [zoom=13] {
+      a/line-width:1.5;
+      a/line-opacity:0.05;
+      a/line-dasharray:2,1;
+      b/line-width:1.2;
+      b/line-opacity:0.05;
+      b/line-dasharray:12,1; }
     [zoom=14] { line-pattern-file:url(img/line_solid_6.png); }
   }
   [class='service'] {
