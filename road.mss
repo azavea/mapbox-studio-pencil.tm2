@@ -46,10 +46,10 @@
   [class='street'],
   [class='street_limited'] {
     [zoom=12] {
-      a/line-width:0;
+      a/line-width:1.5;
       a/line-opacity:0.05;
       a/line-dasharray:2,1;
-      b/line-width:1;
+      b/line-width:1.2;
       b/line-opacity:0.05;
       b/line-dasharray:12,1;
     }
