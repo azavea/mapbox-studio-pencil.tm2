@@ -477,8 +477,8 @@
     <MaxScaleDenominator>200000</MaxScaleDenominator>
     <MinScaleDenominator>100000</MinScaleDenominator>
     <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street')</Filter>
-    <LineSymbolizer stroke-width="0" stroke-opacity="0.05" stroke-dasharray="2, 1" />
-    <LineSymbolizer stroke-width="1" stroke-opacity="0.05" stroke-dasharray="12, 1" />
+    <LineSymbolizer stroke-width="1.5" stroke-opacity="0.05" stroke-dasharray="2, 1" />
+    <LineSymbolizer stroke-width="1.2" stroke-opacity="0.05" stroke-dasharray="12, 1" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
@@ -497,8 +497,8 @@
     <MaxScaleDenominator>200000</MaxScaleDenominator>
     <MinScaleDenominator>100000</MinScaleDenominator>
     <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street_limited')</Filter>
-    <LineSymbolizer stroke-width="0" stroke-opacity="0.05" stroke-dasharray="2, 1" />
-    <LineSymbolizer stroke-width="1" stroke-opacity="0.05" stroke-dasharray="12, 1" />
+    <LineSymbolizer stroke-width="1.5" stroke-opacity="0.05" stroke-dasharray="2, 1" />
+    <LineSymbolizer stroke-width="1.2" stroke-opacity="0.05" stroke-dasharray="12, 1" />
   </Rule>
 </Style>
 <Layer name="tunnel"
@@ -863,8 +863,8 @@
     <MaxScaleDenominator>200000</MaxScaleDenominator>
     <MinScaleDenominator>100000</MinScaleDenominator>
     <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street')</Filter>
-    <LineSymbolizer stroke-width="0" stroke-opacity="0.05" stroke-dasharray="2, 1" />
-    <LineSymbolizer stroke-width="1" stroke-opacity="0.05" stroke-dasharray="12, 1" />
+    <LineSymbolizer stroke-width="1.5" stroke-opacity="0.05" stroke-dasharray="2, 1" />
+    <LineSymbolizer stroke-width="1.2" stroke-opacity="0.05" stroke-dasharray="12, 1" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
@@ -883,8 +883,8 @@
     <MaxScaleDenominator>200000</MaxScaleDenominator>
     <MinScaleDenominator>100000</MinScaleDenominator>
     <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street_limited')</Filter>
-    <LineSymbolizer stroke-width="0" stroke-opacity="0.05" stroke-dasharray="2, 1" />
-    <LineSymbolizer stroke-width="1" stroke-opacity="0.05" stroke-dasharray="12, 1" />
+    <LineSymbolizer stroke-width="1.5" stroke-opacity="0.05" stroke-dasharray="2, 1" />
+    <LineSymbolizer stroke-width="1.2" stroke-opacity="0.05" stroke-dasharray="12, 1" />
   </Rule>
 </Style>
 <Layer name="road"
@@ -1232,8 +1232,8 @@
     <MaxScaleDenominator>200000</MaxScaleDenominator>
     <MinScaleDenominator>100000</MinScaleDenominator>
     <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street')</Filter>
-    <LineSymbolizer stroke-width="0" stroke-opacity="0.05" stroke-dasharray="2, 1" />
-    <LineSymbolizer stroke-width="1" stroke-opacity="0.05" stroke-dasharray="12, 1" />
+    <LineSymbolizer stroke-width="1.5" stroke-opacity="0.05" stroke-dasharray="2, 1" />
+    <LineSymbolizer stroke-width="1.2" stroke-opacity="0.05" stroke-dasharray="12, 1" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
@@ -1252,8 +1252,8 @@
     <MaxScaleDenominator>200000</MaxScaleDenominator>
     <MinScaleDenominator>100000</MinScaleDenominator>
     <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street_limited')</Filter>
-    <LineSymbolizer stroke-width="0" stroke-opacity="0.05" stroke-dasharray="2, 1" />
-    <LineSymbolizer stroke-width="1" stroke-opacity="0.05" stroke-dasharray="12, 1" />
+    <LineSymbolizer stroke-width="1.5" stroke-opacity="0.05" stroke-dasharray="2, 1" />
+    <LineSymbolizer stroke-width="1.2" stroke-opacity="0.05" stroke-dasharray="12, 1" />
   </Rule>
 </Style>
 <Layer name="bridge"
@@ -1445,27 +1445,27 @@
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <MinScaleDenominator>5000</MinScaleDenominator>
     <Filter>([class] = 'main')</Filter>
-    <TextSymbolizer face-name="HolmenHeadlineOT Regular" size="16" placement="line" minimum-distance="500" fill="#545454" halo-fill="rgba(255, 255, 255, 0.7)" halo-radius="3" max-char-angle-delta="5" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer face-name="HolmenHeadlineOT Regular" size="16" placement="line" minimum-distance="500" fill="#363636" halo-fill="rgba(255, 255, 255, 0.7)" halo-radius="3" max-char-angle-delta="5" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
     <Filter>([class] = 'main')</Filter>
-    <TextSymbolizer face-name="HolmenHeadlineOT Regular" size="18" placement="line" minimum-distance="200" fill="#545454" halo-fill="rgba(255, 255, 255, 0.7)" halo-radius="6" max-char-angle-delta="5" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer face-name="HolmenHeadlineOT Regular" size="18" placement="line" minimum-distance="200" fill="#363636" halo-fill="rgba(255, 255, 255, 0.7)" halo-radius="4" max-char-angle-delta="5" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
     <Filter>([class] = 'main')</Filter>
-    <TextSymbolizer face-name="HolmenHeadlineOT Regular" size="18" placement="line" minimum-distance="200" fill="#545454" halo-fill="rgba(255, 255, 255, 0.7)" halo-radius="5" max-char-angle-delta="5" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer face-name="HolmenHeadlineOT Regular" size="18" placement="line" minimum-distance="200" fill="#363636" halo-fill="rgba(255, 255, 255, 0.7)" halo-radius="3" max-char-angle-delta="5" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
-    <TextSymbolizer face-name="HolmenHeadlineOT Regular" size="18" placement="line" minimum-distance="200" fill="#545454" halo-fill="rgba(255, 255, 255, 0.7)" halo-radius="6" max-char-angle-delta="5" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer face-name="HolmenHeadlineOT Regular" size="18" placement="line" minimum-distance="200" fill="#363636" halo-fill="rgba(255, 255, 255, 0.7)" halo-radius="4" max-char-angle-delta="5" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
-    <TextSymbolizer face-name="HolmenHeadlineOT Regular" size="18" placement="line" minimum-distance="200" fill="#545454" halo-fill="rgba(255, 255, 255, 0.7)" halo-radius="5" max-char-angle-delta="5" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer face-name="HolmenHeadlineOT Regular" size="18" placement="line" minimum-distance="200" fill="#363636" halo-fill="rgba(255, 255, 255, 0.7)" halo-radius="3" max-char-angle-delta="5" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
 </Style>
 <Layer name="road_label"

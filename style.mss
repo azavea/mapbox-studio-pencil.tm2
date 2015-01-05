@@ -3,7 +3,6 @@
 // Much of the design of this style is handled by image textures.
 // These were drawn by hand on paper, scanned, and tweaked in
 // image editing software.
-// This style was updated by Azavea for a basemap for Fairmont Water Works.
 
 Map {
   background-image:url(img/natural_paper.png);
@@ -119,7 +118,7 @@ Map {
   text-size: 16;
   text-placement: line;
   text-min-distance: 500;
-  text-fill: #545454;
+  text-fill: #363636;
   text-halo-fill: fadeout(#ffffff,30%);
   text-halo-radius: 3;
   text-max-char-angle-delta:5;
@@ -130,9 +129,9 @@ Map {
   text-size: 18;
   text-placement: line;
   text-min-distance: 200;
-  text-fill: #545454;
+  text-fill: #363636;
   text-halo-fill: fadeout(#ffffff,30%);
-  text-halo-radius: 5;
+  text-halo-radius: 3;
   text-max-char-angle-delta:5;
   }
 
@@ -142,9 +141,9 @@ Map {
   text-name: [name];
   text-placement: line;
   text-min-distance: 200;
-  text-fill: #545454;
+  text-fill: #363636;
   text-halo-fill: fadeout(#ffffff,30%);
-  text-halo-radius: 6;
+  text-halo-radius: 4;
   text-max-char-angle-delta:5;
   }
 
